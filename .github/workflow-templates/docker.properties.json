@@ -1,0 +1,11 @@
+{
+    "name": "Docker Deployment",
+    "description": "Uplink container build, push to GHCR, and Portainer redeploy.",
+    "iconName": "octicon container",
+    "categories": [
+        "Continuous integration", "Deployment", "Automation", "Docker"
+    ],
+    "filePatterns": [
+        "^dockerfile$", "^Dockerfile$", "docker-compose.*.ya?ml$"
+    ]
+}
