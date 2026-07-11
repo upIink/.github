@@ -1,0 +1,21 @@
+name: "Deployment"
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  workflow:
+    uses: upIink/.github/.github/workflows/docker.yml@main
+    permissions:
+      contents: read
+      packages: write
+
+    secrets: inherit
+    with:
+        REGISTRY: ghcr.io
+        IMAGE_NAME: ${{ github.repository }}
+
+        PORTAINER: true
+        URL: "https://service.uplinkbot.xyz"
